@@ -175,8 +175,8 @@ svg.append("g")
             "class":"horizontalGrid",
             "x1" : -2,
             "x2" : width,
-            "y1" : y(0) + 20,
-            "y2" : y(0) + 20,
+            "y1" : y(1) - 15,
+            "y2" : y(1) - 15,
             "fill" : "none",
             "shape-rendering" : "crispEdges",
             "stroke" : "#e0e1e1",
@@ -228,7 +228,7 @@ var circleEnd = candidates.append("circle")
 var timemark = candidates.append("path")
                   .attr("d", d3.svg.symbol().type("triangle-up"))
                   .style("fill", "grey")
-                  .attr("transform",function(d) { return "translate(" + (x(d.values[0].week) ) + "," + (y(1)-5) + ") rotate(-30)"; })
+                  .attr("transform",function(d) { return "translate(" + (x(d.values[0].week) ) + "," + (y(1)-15) + ") rotate(-30)"; })
 
 
 var round = candidates.append("circle")
@@ -316,7 +316,7 @@ var round = candidates.append("circle")
       timemark.transition()
          .duration(speed)
          .ease('linear')
-         .attr("transform",function(d) { return "translate(" + (x(d.values[week].week) ) + "," + (y(1)-5) + ") rotate(-30)"; })
+         .attr("transform",function(d) { return "translate(" + (x(d.values[week].week) ) + "," + (y(1)-15) + ") rotate(-30)"; })
 
       // timemark.transition()
       //   .duration(speed)
