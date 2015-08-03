@@ -228,7 +228,7 @@ var circleEnd = candidates.append("circle")
 var timemark = candidates.append("path")
                   .attr("d", d3.svg.symbol().type("triangle-up"))
                   .style("fill", "grey")
-                  .attr("transform",function(d) { return "translate(" + (x(d.values[0].week) ) + "," + (y(0)+18) + ") rotate(-30)"; })
+                  .attr("transform",function(d) { return "translate(" + (x(d.values[0].week) ) + "," + (y(1)-5) + ") rotate(-30)"; })
 
 
 var round = candidates.append("circle")
@@ -316,7 +316,7 @@ var round = candidates.append("circle")
       timemark.transition()
          .duration(speed)
          .ease('linear')
-         .attr("transform",function(d) { return "translate(" + (x(d.values[week].week) ) + "," + (y(0)+18) + ") rotate(-30)"; })
+         .attr("transform",function(d) { return "translate(" + (x(d.values[week].week) ) + "," + (y(1)-5) + ") rotate(-30)"; })
 
       // timemark.transition()
       //   .duration(speed)
