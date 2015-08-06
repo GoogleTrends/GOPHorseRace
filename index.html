@@ -86,7 +86,7 @@ var color = d3.scale.category10();
 var xAxis = d3.svg.axis()
     .scale(x)
     .tickSize(0)
-    .ticks(16)
+    .ticks(14)
     .orient("top");
 
 var xtickLabels = ["8:56 PM EST", "9:04 PM EST", "9:12 PM EST", "9:20 PM EST", "9:28 PM EST", "9:36 PM EST", "9:44 PM EST", "9:52 PM EST", "10:00 PM EST", "10:08 PM EST", "10:16 PM EST", "10:24 PM EST", "10:32 PM EST", "10:40 PM EST"];
@@ -98,7 +98,7 @@ xAxis.tickFormat(function(d,i){
 var yAxis = d3.svg.axis()
     .scale(y)
     .tickFormat(function(d) { return d;})
-    .ticks(10) // NEED TO UPDATE
+    .ticks(10) 
     .innerTickSize(- width)
     .tickPadding(10)
     .outerTickSize(0)
