@@ -125,7 +125,7 @@ var clip = svg.append("clipPath")
     .attr("width", 0)
     .attr("height", height*1.2);
 
-d3.csv("MainDebate.csv", function(error, data) {
+d3.csv("MainDebateCandidates.csv", function(error, data) {
   
   color.domain(d3.keys(data[0]).filter(function(key) { return key !== "week"; }));
 
