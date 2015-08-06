@@ -89,7 +89,7 @@ var xAxis = d3.svg.axis()
     .ticks(16)
     .orient("top");
 
-var xtickLabels = ["16:40 EST","16:48 EST","16:56 EST","17:04 EST","17:12 EST","17:20 EST","17:28 EST","17:36 EST","17:44 EST","17:52 EST","18:00 EST","18:08 EST","18:16 EST","18:24 EST","18:32 EST","18:40 EST"];
+var xtickLabels = ["20:56 EST", "21:04 EST", "21:12 EST", "21:20 EST", "21:28 EST", "21:36 EST", "21:44 EST", "21:52 EST", "22:00 EST", "22:08 EST", "22:16 EST", "22:24 EST", "22:32 EST"];
 
 xAxis.tickFormat(function(d,i){
     return xtickLabels[i]
@@ -125,7 +125,7 @@ var clip = svg.append("clipPath")
     .attr("width", 0)
     .attr("height", height*1.2);
 
-d3.csv("HorseRaceData - 10 candidates.csv", function(error, data) {
+d3.csv("MainDebate.csv", function(error, data) {
   
   color.domain(d3.keys(data[0]).filter(function(key) { return key !== "week"; }));
 
